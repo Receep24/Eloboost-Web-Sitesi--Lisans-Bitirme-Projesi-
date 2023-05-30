@@ -1,0 +1,67 @@
+﻿body {
+   
+}
+.iletisim-genel {
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    padding-top: 10vh;
+    background-image: url('img/hizmetlerarka.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.form-alan {
+    margin-left: 10vh;
+   
+    width: 30%;
+    height: 50vh;
+   
+}
+.form-alan {
+    width: 50%;
+    height: 65vh;
+  padding-left:10vh;
+    background-color:rebeccapurple;
+    border-radius:3%;
+}
+
+.form-mail {
+    width: 70%;
+    height: 35vh;
+   
+    float: left;
+}
+
+.txt {
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height:25px;
+    width:180px;
+    margin-top:10px;
+
+  
+}
+.txt1 {
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 150px;
+    width: 250px;
+    margin-top: 10px;
+    
+}
+.baslik p {
+   font-size:100%;
+    color:white;
+    
+}
+.baslik h1 {
+    font-size: 180%;
+    color: white;
+    font-weight:bold;
+}
+.kaydir {
+    padding-top:100px;
+}

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<FRFELOBOOST.Models.Games>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn btn-success" href="@Url.Action("Create","Games")">Yeni Oyun Ekle</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GamesName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ranks.RankName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GamesName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ranks.RankName)
+        </td>
+        <td>
+            <a class="btn btn-warning" href="@Url.Action("Edit","Games", new { id = item.GamesID})">Güncelle</a>
+            <a class="btn btn-primary" href="@Url.Action("Edit","Games", new { id = item.GamesID})">Detay</a>
+            <a class="btn btn-danger" href="@Url.Action("Edit","Games", new { id = item.GamesID})">Sil</a>
+        </td>
+    </tr>
+}
+
+</table>

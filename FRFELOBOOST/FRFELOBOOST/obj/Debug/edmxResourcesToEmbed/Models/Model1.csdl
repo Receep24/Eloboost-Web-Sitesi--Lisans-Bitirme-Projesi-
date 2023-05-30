@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="fyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admins">
+    <Key>
+      <PropertyRef Name="AdminsID" />
+    </Key>
+    <Property Name="AdminsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usertype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GenderID" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TelefonNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Genders" Relationship="Self.FK_Admins_GenderID" FromRole="Admins" ToRole="Genders" />
+  </EntityType>
+  <EntityType Name="Adverts">
+    <Key>
+      <PropertyRef Name="AdvertsID" />
+    </Key>
+    <Property Name="AdvertsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EloobosterID" Type="Int32" />
+    <Property Name="GamesID" Type="Int32" />
+    <Property Name="RankID" Type="Int32" />
+    <Property Name="AdvertTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AdvertDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Elooboster" Relationship="Self.FK_Adverts_EloobosterID" FromRole="Adverts" ToRole="Elooboster" />
+    <NavigationProperty Name="Games" Relationship="Self.FK_Adverts_GamesID" FromRole="Adverts" ToRole="Games" />
+    <NavigationProperty Name="Ranks" Relationship="Self.FK_Adverts_RankID" FromRole="Adverts" ToRole="Ranks" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="CommentsID" />
+    </Key>
+    <Property Name="CommentsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GamesID" Type="Int32" />
+    <Property Name="CommentsName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Games" Relationship="Self.FK_Comments_GamesID" FromRole="Comments" ToRole="Games" />
+    <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_CommentsID" FromRole="Comments" ToRole="Customers" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CommentsID" Type="Int32" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usertype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GenderID" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK_Customers_CommentsID" FromRole="Customers" ToRole="Comments" />
+    <NavigationProperty Name="Genders" Relationship="Self.FK_Customers_GenderID" FromRole="Customers" ToRole="Genders" />
+  </EntityType>
+  <EntityType Name="Elooboster">
+    <Key>
+      <PropertyRef Name="EloobosterID" />
+    </Key>
+    <Property Name="EloobosterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usertype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GenderID" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Adverts" Relationship="Self.FK_Adverts_EloobosterID" FromRole="Elooboster" ToRole="Adverts" />
+    <NavigationProperty Name="Genders" Relationship="Self.FK_Elooboster_GenderID" FromRole="Elooboster" ToRole="Genders" />
+  </EntityType>
+  <EntityType Name="Games">
+    <Key>
+      <PropertyRef Name="GamesID" />
+    </Key>
+    <Property Name="GamesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GamesName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RankID" Type="Int32" />
+    <NavigationProperty Name="Adverts" Relationship="Self.FK_Adverts_GamesID" FromRole="Games" ToRole="Adverts" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK_Comments_GamesID" FromRole="Games" ToRole="Comments" />
+    <NavigationProperty Name="Ranks" Relationship="Self.FK_Games_RankID" FromRole="Games" ToRole="Ranks" />
+  </EntityType>
+  <EntityType Name="Genders">
+    <Key>
+      <PropertyRef Name="GenderID" />
+    </Key>
+    <Property Name="GenderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GenderName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Admins" Relationship="Self.FK_Admins_GenderID" FromRole="Genders" ToRole="Admins" />
+    <NavigationProperty Name="Customers" Relationship="Self.FK_Customers_GenderID" FromRole="Genders" ToRole="Customers" />
+    <NavigationProperty Name="Elooboster" Relationship="Self.FK_Elooboster_GenderID" FromRole="Genders" ToRole="Elooboster" />
+  </EntityType>
+  <EntityType Name="Ranks">
+    <Key>
+      <PropertyRef Name="RankID" />
+    </Key>
+    <Property Name="RankID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RankName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RankPrice" Type="Int32" />
+    <NavigationProperty Name="Adverts" Relationship="Self.FK_Adverts_RankID" FromRole="Ranks" ToRole="Adverts" />
+    <NavigationProperty Name="Games" Relationship="Self.FK_Games_RankID" FromRole="Ranks" ToRole="Games" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usertype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Admins_GenderID">
+    <End Role="Genders" Type="Self.Genders" Multiplicity="0..1" />
+    <End Role="Admins" Type="Self.Admins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="GenderID" />
+      </Principal>
+      <Dependent Role="Admins">
+        <PropertyRef Name="GenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Adverts_EloobosterID">
+    <End Role="Elooboster" Type="Self.Elooboster" Multiplicity="0..1" />
+    <End Role="Adverts" Type="Self.Adverts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Elooboster">
+        <PropertyRef Name="EloobosterID" />
+      </Principal>
+      <Dependent Role="Adverts">
+        <PropertyRef Name="EloobosterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Adverts_GamesID">
+    <End Role="Games" Type="Self.Games" Multiplicity="0..1" />
+    <End Role="Adverts" Type="Self.Adverts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="GamesID" />
+      </Principal>
+      <Dependent Role="Adverts">
+        <PropertyRef Name="GamesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Adverts_RankID">
+    <End Role="Ranks" Type="Self.Ranks" Multiplicity="0..1" />
+    <End Role="Adverts" Type="Self.Adverts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ranks">
+        <PropertyRef Name="RankID" />
+      </Principal>
+      <Dependent Role="Adverts">
+        <PropertyRef Name="RankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_GamesID">
+    <End Role="Games" Type="Self.Games" Multiplicity="0..1" />
+    <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="GamesID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="GamesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customers_CommentsID">
+    <End Role="Comments" Type="Self.Comments" Multiplicity="0..1" />
+    <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comments">
+        <PropertyRef Name="CommentsID" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="CommentsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customers_GenderID">
+    <End Role="Genders" Type="Self.Genders" Multiplicity="0..1" />
+    <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="GenderID" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="GenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Elooboster_GenderID">
+    <End Role="Genders" Type="Self.Genders" Multiplicity="0..1" />
+    <End Role="Elooboster" Type="Self.Elooboster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="GenderID" />
+      </Principal>
+      <Dependent Role="Elooboster">
+        <PropertyRef Name="GenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Games_RankID">
+    <End Role="Ranks" Type="Self.Ranks" Multiplicity="0..1" />
+    <End Role="Games" Type="Self.Games" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ranks">
+        <PropertyRef Name="RankID" />
+      </Principal>
+      <Dependent Role="Games">
+        <PropertyRef Name="RankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="fyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admins" />
+    <EntitySet Name="Adverts" EntityType="Self.Adverts" />
+    <EntitySet Name="Comments" EntityType="Self.Comments" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" />
+    <EntitySet Name="Elooboster" EntityType="Self.Elooboster" />
+    <EntitySet Name="Games" EntityType="Self.Games" />
+    <EntitySet Name="Genders" EntityType="Self.Genders" />
+    <EntitySet Name="Ranks" EntityType="Self.Ranks" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK_Admins_GenderID" Association="Self.FK_Admins_GenderID">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Admins" EntitySet="Admins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Adverts_EloobosterID" Association="Self.FK_Adverts_EloobosterID">
+      <End Role="Elooboster" EntitySet="Elooboster" />
+      <End Role="Adverts" EntitySet="Adverts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Adverts_GamesID" Association="Self.FK_Adverts_GamesID">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Adverts" EntitySet="Adverts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Adverts_RankID" Association="Self.FK_Adverts_RankID">
+      <End Role="Ranks" EntitySet="Ranks" />
+      <End Role="Adverts" EntitySet="Adverts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_GamesID" Association="Self.FK_Comments_GamesID">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customers_CommentsID" Association="Self.FK_Customers_CommentsID">
+      <End Role="Comments" EntitySet="Comments" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customers_GenderID" Association="Self.FK_Customers_GenderID">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Elooboster_GenderID" Association="Self.FK_Elooboster_GenderID">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Elooboster" EntitySet="Elooboster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Games_RankID" Association="Self.FK_Games_RankID">
+      <End Role="Ranks" EntitySet="Ranks" />
+      <End Role="Games" EntitySet="Games" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

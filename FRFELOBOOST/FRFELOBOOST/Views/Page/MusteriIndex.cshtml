@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/MusteriLayout.cshtml";
+    <link href="~/Content/iletisim.css" rel="stylesheet" />
+    <title>İletişim</title>
+}
+
+
+
+
+<div class="iletisim-genel">
+    <div class="form-genel">
+        <div class="form-alan">
+            <div class="baslik">
+                <br />
+                <h1>Bizimle iletişime geçin.</h1>
+                <p>Aşağıdaki alandan bize her türlü konuda danışabilirsiniz.<br />Mail yoluyla aşağıdaki bilgileri doğru şekilde doldurarak bizimle iletişime geçin. </p>
+            </div>
+
+            <div class="form-mail">
+                @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "contact-form", action = "" }))
+                {
+
+                <input class="txt" type="text" name="Name" placeholder=" Musteri kullanıcı adı." required value="@User.Identity.Name" />
+                    <br />
+
+                    <input class="txt" type="text" name="Email" placeholder=" E-Mail adresi giriniz." required />
+                    <br />
+
+                    <input class="txt" type="text" name="Subject" placeholder=" Konuyu giriniz." required />
+                    <br />
+
+                    <input class="txt1" type="text" name="Message" placeholder=" Mesajınızı giriniz." required />
+                    <br />
+                    <br />
+
+
+
+                    <input type="submit" value="Gönder" class="btn btn-danger" />
+                    if (ViewBag.Success == true)
+                    {
+                        <span style="color:white">Mesajınız başarıyla gönderilmiştir.</span>
+                    }
+                }
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+

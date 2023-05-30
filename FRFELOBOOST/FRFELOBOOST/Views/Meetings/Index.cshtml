@@ -1,0 +1,70 @@
+﻿@model IEnumerable<FRFELOBOOST.Models.Meetings>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Randavu Listele</h2>
+
+
+<table class="table">
+    <tr>
+
+        <th>
+           <p>İlan Başlığı</p>
+        </th>
+        <th>
+            <p>Müsteri</p>
+        </th>
+        <th>
+            <p>Elobooster</p>
+        </th>
+        <th style="width:200px;">
+            <p>Oyun Adı</p>
+        </th>
+        <th>
+            <p>Küme Aralığı</p>
+        </th>
+        <th>
+            <p>Fiyat</p>
+        </th>
+        <th style="width:170px;">
+            <p>Randevu Tarihi</p>
+        </th>
+        <th  style="width:170px;">detaylar</th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Adverts.AdvertTitle)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Customers.username)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Elooboster.username)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Games.GamesName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ranks.RankName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ranks.RankPrice)
+    </td>
+    <td>
+        @Convert.ToString(string.Format("{0:dd-MMMM-yyyy}", item.MeetingDate))
+       
+    </td>
+    <td>
+        <a class="btn btn-primary" href="@Url.Action("Details", "Meetings", new { id= item.AdvertsID})">Detayı Gör</a>
+        <a class="btn btn-danger" href="@Url.Action("Delete", "Meetings", new { id= item.AdvertsID})">Sil</a>
+    </td>
+</tr>
+}
+
+</table>

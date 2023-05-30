@@ -1,0 +1,142 @@
+﻿
+@model FRFELOBOOST.Models.Meetings
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/MusteriLayout.cshtml";
+    <link href="~/Content/randevu-al.css" rel="stylesheet" />
+}
+<div class="container">
+    <div class="kayit-alan1">
+        <div class="booster_basvuru">
+            <br />
+
+            <h1>Elobooost işleminin tamamlanması için son adımdasın... </h1>
+            <p>
+
+                Bu kısımdan seçtiğiniz boosterden, oyundan ve kümeyi seçerek eloboost işlemi için randevu almak için son adımdasın <br />
+                alttaki formu düzgün bir şekilde doldurarak işlemini tamamla!
+
+            </p>
+        </div>
+    </div>
+    <div class="kayit-alan2">
+        <div class="alan2sol">
+            <div class="form_baslik">
+                <br />
+                <br />
+            </div>
+            <div class="elo_kayit">
+                <br />
+                <h2>Randevu Al</h2>
+                <div class="elo_form">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="kullanici-adi">
+
+
+                                @Html.DropDownList("CustomerID", null, htmlAttributes: new { @class = "txt" })
+                                @Html.ValidationMessageFor(model => model.CustomerID, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="kullanici-adi">
+
+                                @Html.DropDownList("EloobosterID", null, htmlAttributes: new { @class = "txt" })
+                                @Html.ValidationMessageFor(model => model.EloobosterID, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="kullanici-adi">
+
+                                @Html.DropDownList("AdvertsID", null, htmlAttributes: new { @class = "txt" })
+                                @Html.ValidationMessageFor(model => model.AdvertsID, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="kullanici-adi">
+
+                                @Html.DropDownList("GamesID", null, htmlAttributes: new { @class = "txt" })
+                                @Html.ValidationMessageFor(model => model.GamesID, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="kullanici-adi">
+
+                                @Html.DropDownList("RankID", null, htmlAttributes: new { @class = "txt", required = "required" })
+                                @Html.ValidationMessageFor(model => model.RankID, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="kullanici-adi">
+
+                                @Html.EditorFor(model => model.MeetingDate, new { htmlAttributes = new { @class = "txt", type = "date", required = "required" } })
+                                @Html.ValidationMessageFor(model => model.MeetingDate, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div>
+                                <div class="buton-yonet">
+                                    <input type="submit" value="Randevu Al" class="button1" />
+
+                                </div>
+                                @if (ViewBag.Success == true)
+                                {
+                                    <span style="color:white">Randevunuz başarıyla alınmıştır.</span>
+                                }
+                            </div>
+                        </div>}
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="alan2sag">
+
+            <img src="~/Content/img/RECO.png" />
+        </div>
+    </div>
+    <div class="kayit-alan3">
+        <div class="kayit-alan3foto1">
+            <img src="~/Content/img/dianaa2.png" />
+
+        </div>
+        <div class="kayit-alan3yazi">
+            <div class="yazilar">
+                <br />
+                <br />
+                <br />
+                <h3>Bizi tercih ettiğiniz için teşekkur ederiz.</h3>
+                <br />
+                <p>
+                    FRF Eloboost ailesi olarak sizlere, <br /> Türkiye Elo Boost
+                    sektöründe en iyi hizmeti en uygun fiyatlarla sunmayı garanti ediyoruz.<br />
+                    İşimizi tam profesyonel olarak yapmanın yanı sıra yasal olarak yapıyoruz.<br />
+                    Profesyonel boosting hizmetini sizlerin vermesini istiyoruz<br />
+                    ve sizi ailemize dahil ediyoruz.
+                </p>
+
+            </div>
+        </div>
+        <div class="kayit-alan3foto2">
+            <img src="~/Content/img/ters-diana.png" />
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+

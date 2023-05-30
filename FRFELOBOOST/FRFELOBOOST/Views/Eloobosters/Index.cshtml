@@ -1,0 +1,68 @@
+﻿@model IEnumerable<FRFELOBOOST.Models.Elooboster>
+
+@{
+    ViewBag.Title = "Elobooster";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Elobooster Listesi</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            <p>Kullanıcı Adı</p>
+        </th>
+        <th>
+            <p>Şifre</p>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usertype)
+        </th>
+        <th>
+            <p>Adı</p>
+        </th>
+        <th>
+            <p>Soyadı</p>
+        </th>
+        <th>
+            <p>E-Mail</p>
+        </th>
+        <th>
+            <p>Cinsiyet</p>
+        </th>
+        <th><p>Detaylar</p></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usertype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genders.GenderName)
+        </td>
+        <td>
+            
+            <a class="btn btn-primary" href="@Url.Action("Details", "Eloobosters", new { id= item.EloobosterID})">Detayı Gör</a>
+            <a class="btn btn-danger" href="@Url.Action("Delete", "Eloobosters", new { id= item.EloobosterID})">Sil</a>
+        </td>
+    </tr>
+}
+
+</table>

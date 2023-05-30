@@ -1,0 +1,84 @@
+﻿body {
+    
+    background-image: url('img/yonetimarka.jpeg');
+    background-position: unset;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.table {
+    background-color: whitesmoke;
+    opacity: 0.8;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    border: 2px solid;
+    
+}
+
+
+
+body h2 {
+    color: white;
+    margin-top: 30px;
+    border: 2px solid;
+    width: 25%;
+    text-align: center;
+    background-color: #577D86;
+    padding: 10px;
+    border-radius: 3px;
+}
+    body h2:hover {
+      
+        opacity:0.7;
+        cursor:pointer;
+    }
+th {
+    background-color:darkslategrey;
+    border:2px solid;
+    font-weight:bold;
+    font-size:18px;
+    color:white;
+   
+    
+}
+td {
+    color:black;
+    font-size:18px;
+    
+    
+    
+}
+dl {
+    background-color: whitesmoke;
+    opacity: 0.7;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 10px;
+}
+dt {
+    
+    text-align:center;
+    padding:0px 25px;
+    padding:10px;
+}
+h4 {
+    margin-top:30px;
+}
+.form-horizontal {
+    background-color: whitesmoke;
+    border-radius: 3px;
+    opacity: 0.9;
+    font-size: 18px;
+    margin-top: 35px;
+}
+.dl-horizontal {
+    margin-top: 35px;
+}
+h1{
+    color:white;
+}
+

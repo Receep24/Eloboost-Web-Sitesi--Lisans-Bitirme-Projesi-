@@ -1,0 +1,213 @@
+﻿
+@model FRFELOBOOST.Models.ViewModel
+
+@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/MusteriLayout.cshtml";
+    <title>FRF Eloboost</title>
+    <link href="~/Content/layout-deneme.css" rel="stylesheet" />
+}
+
+
+<div class="container">
+
+    <div class="alan">
+        <div class="slideralan">
+            <div id="slider-wrapper">
+                <div class="slider">
+                    <a class="img-bir">
+                        <img src="~/Content/img/slider1.jpg" />
+
+                    </a>
+                    <a class="img-iki">
+                        <img src="~/Content/img/slider2.jpg" />
+
+                    </a>
+                    <a class="img-uc">
+                        <img src="~/Content/img/slider3.jpg" />
+
+                    </a>
+                    <a class="img-dort">
+                        <img src="~/Content/img/slider4.jpg" />
+
+                    </a>
+                    <a class="img-bes">
+                        <img src="~/Content/img/slider2.jpg" />
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alan2">
+        <div class="alan2fotolar">
+            <div class="alan2fotolar1">
+                <a href="@Url.Action("MusteriHizmetlerimiz","Hizmetlerimiz")">
+                    <img src="~/Content/img/lol.png" />
+                </a>
+            </div>
+            <div class="alan2fotolar2">
+                <a href="@Url.Action("MusteriHizmetlerimiz","Hizmetlerimiz")">
+                    <img src="~/Content/img/valorant.png" />
+                </a>
+            </div>
+            <div class="alan2fotolar3">
+                <a href="@Url.Action("MusteriHizmetlerimiz","Hizmetlerimiz")">
+                    <img src="~/Content/img/tft.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="alan3">
+        <div class="alan3aciklama">
+            <h1>FRF ELOBOOST HİZMETLERİ</h1>
+            <P>Uygun fiyatlarımızla Türkiye'nin en iyi, en hızlı ve kaliteli boosting hizmetini sağlıyoruz.</P>
+        </div>
+        <div class="alan3yatay1">
+            <div class="alan3yatay1foto1">
+                <div class="alan3yatay1foto1img">
+                    <img src="~/Content/img/shield22.png" />
+                </div>
+                <div class="alan3yatay1foto1aciklama">
+                    <p class="p_ayar">Hesap Güvenliği</p>
+                    <p>Hesabınızın güvenliğini %100 garanti ediyoruz.</p>
+                </div>
+            </div>
+            <div class="alan3yatay1foto2">
+                <div class="alan3yatay1foto1img">
+                    <img src="~/Content/img/speed2.png" />
+                </div>
+                <div class="alan3yatay1foto1aciklama">
+                    <p class="p_ayar">Hızlı Teslimat</p>
+                    <p>Her türlü bosting işlemlerini saatler içinde tamamlayıp, teslim etmekteyiz.</p>
+                </div>
+            </div>
+            <div class="alan3yatay1foto3">
+                <div class="alan3yatay1foto1img">
+                    <img src="~/Content/img/para2.png" />
+                </div>
+                <div class="alan3yatay1foto1aciklama">
+                    <p class="p_ayar">Uygun Fiyatlar</p>
+                    <p>Sektörde en uygun fiyatlarla işlem yapmaktayız.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="alan3yatay2">
+            <div class="alan3yatay1foto1">
+                <div class="alan3yatay1foto1img">
+                    <img src="~/Content/img/gizli2.png" />
+                </div>
+                <div class="alan3yatay1foto1aciklama">
+                    <p class="p_ayar">Gizlilik</p>
+                    <p>Bütün boosting hizmetleri gizli bir şekilde ve profesyonel oyuncular tarafından yapılmaktadır.</p>
+                </div>
+            </div>
+            <div class="alan3yatay1foto2">
+                <div class="alan3yatay1foto1img">
+                    <img src="~/Content/img/admin2.png" />
+                </div>
+                <div class="alan3yatay1foto1aciklama">
+                    <p class="p_ayar">Aktif Adminler</p>
+                    <p>7/24 Aktif adminler ile her türlü sorunlar ve problemler çözülmektedir.</p>
+                </div>
+            </div>
+            <div class="alan3yatay1foto3">
+                <div class="alan3yatay1foto1img">
+                    <img src="~/Content/img/chat2.png" />
+                </div>
+                <div class="alan3yatay1foto1aciklama">
+                    <p class="p_ayar">7/24 Destek</p>
+                    <p>7/24 Destek imkanıyla anlık olarak bütün sorularınızı yanıtlıyor, sorunlarınıza çözüm üretiyoruz.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="alan4">
+        <div class="musteriyorumlari">
+            <div class="hwrap">
+                <div class="hmove">
+                    <div class="hslide">
+                        <div class="yorumsliderresim"><img src="~/Content/img/like.png" /></div>
+                        @foreach (var oyun in Model.Games)
+                        {
+
+
+                            if (oyun.GamesID == 1)
+                            {
+                                <p>@oyun.GamesName Hizmetleri</p>
+                            }
+
+
+                        }
+                        @foreach (var com in Model.Comments)
+
+                        {
+                            if (com.CommentsID == 1)
+                            {
+                                <p>@com.Customers.username</p>
+                                <p>@com.CommentsName</p>
+
+                            }
+                        }
+
+                    </div>
+                    <div class="hslide">
+                        <div class="yorumsliderresim"><img src="~/Content/img/love.png" /></div>
+                        @foreach (var oyun in Model.Games)
+                        {
+
+
+                            if (oyun.GamesID == 2)
+                            {
+                                <p>@oyun.GamesName Hizmetleri</p>
+                            }
+
+
+                        }
+                        @foreach (var com in Model.Comments)
+
+                        {
+                            if (com.CommentsID == 2)
+                            {
+                                <p>@com.Customers.username</p>
+                                <p>@com.CommentsName</p>
+
+                            }
+                        }
+                    </div>
+                    <div class="hslide">
+                        <div class="yorumsliderresim"><img src="~/Content/img/like.png" /></div>
+                        @foreach (var oyun in Model.Games)
+                        {
+
+
+                            if (oyun.GamesID == 3)
+                            {
+                                <p>@oyun.GamesName Hizmetleri</p>
+                            }
+
+
+                        }
+                        @foreach (var com in Model.Comments)
+
+                        {
+                            if (com.CommentsID == 3)
+                            {
+                                <p>@com.Customers.username</p>
+                                <p>@com.CommentsName</p>
+
+                            }
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

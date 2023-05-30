@@ -1,0 +1,38 @@
+﻿
+@model FRFELOBOOST.Models.ViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/MusteriLayout.cshtml";
+}
+
+<h2>Eloboosterin oluşturduğu ilanlar burada gözükecek</h2>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>İlan Başlığı</th>
+            <th>Elobooster Adı</th>
+            <th>Oyun Adı</th>
+            <th>Yükseltilecek Rank</th>
+            <th>Rank Fiyat</th>
+            <th>İlanTarih</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ilan in Model.Adverts)
+        {
+            <tr>
+                <td>@ilan.AdvertTitle</td>
+                <td>@ilan.Elooboster.FirstName @ilan.Elooboster.LastName</td>
+                <td>@ilan.Games.GamesName</td>
+                <td>@ilan.Ranks.RankName</td>
+                <td>@ilan.Ranks.RankPrice</td>
+                <td>@ilan.AdvertDate</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

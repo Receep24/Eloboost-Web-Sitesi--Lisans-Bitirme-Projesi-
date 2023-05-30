@@ -1,0 +1,90 @@
+﻿@model IEnumerable<FRFELOBOOST.Models.Adverts>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/layout_deneme.cshtml";
+    <link href="~/Content/ilanlar_genel.css" rel="stylesheet" />
+    <title>Genel İlanlar</title>
+}
+<div class="container">
+    <div class="ilanlar_alan">
+        <div class="alan_baslik">
+
+            <br />
+            <h1>Bütün ilanları burdan görüntüleyebilirsiniz;</h1>
+            <p>Eğer siz de sitemizin eleboosterlerinden biriyseniz aşağıdaki linkten ilan oluştabilirsiniz.</p>
+            <p class="ilan-link">
+                <a href="@Url.Action("Login","Kullanicilar")">
+                    <img src="~/Content/img/ilan olustur.png" />
+                </a>
+            </p>
+        </div>
+        <div class="alan_ortala">
+
+            <div>
+
+                <table class="table">
+                    <tr>
+                        <th>
+                            <p>İlan Başlığı</p>
+                        </th>
+                        <th>
+                            <p>Oyun Adı</p>
+                        </th>
+                        <th>
+                            <p>Elobooster Nick</p>
+                        </th>
+                        <th>
+                            <p>Kume Aralıgı</p>
+                        </th>
+                        <th>
+                            <p>Ucreti</p>
+                        </th>
+                        <th>
+                            <p>İlan Tarihi</p>
+                        </th>
+                        <th>
+                            Ayrıntılar
+                        </th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="baslik-boyut">
+                                @Html.DisplayFor(modelItem => item.AdvertTitle)
+                            </td>
+                            <td class="oyun-boyut">
+                                @Html.DisplayFor(modelItem => item.Games.GamesName)
+                            </td>
+                            <td class="elobooster-boyut">
+                                @Html.DisplayFor(modelItem => item.Elooboster.username)
+                            </td>
+                            <td class="kume-boyut">
+                                @Html.DisplayFor(modelItem => item.Ranks.RankName)
+                            </td>
+                            <td class="fiyat-boyut">
+                                @Html.DisplayFor(modelItem => item.Ranks.RankPrice)
+                            </td>
+                            <td class="tarih-boyut">
+                                @Convert.ToString(string.Format("{0:dd-MMMM-yyyy}", item.AdvertDate))
+                            </td>
+                            <td class="ayrıntılar-boyut">
+                                <p class="renk">
+                                   
+                                    <a href="@Url.Action("Login","Kullanicilar")">Randevu Al</a>
+                                </p>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-ust">a</div>
+</div>

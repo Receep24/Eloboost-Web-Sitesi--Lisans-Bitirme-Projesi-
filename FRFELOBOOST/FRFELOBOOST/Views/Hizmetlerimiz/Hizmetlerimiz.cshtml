@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Hizmetlerimiz";
+    Layout = "~/Views/Shared/layout_deneme.cshtml";
+    <title>Hizmetlerimiz</title>
+    <link href="~/Content/hizmetler.css" rel="stylesheet" />
+}
+
+
+<div class="container">
+    <div class="hizmetleraciklama">
+        <h1 class="">Sunduğumuz hizmet, ihtiyaçlarınızı karşılamak için özel olarak tasarlanmıştır.</h1>
+        <p>
+            Hizmet Vermeye Başladığımız ilk günden beri tek bir hedefimiz oldu müşterilerimize hızlı ve kaliteli
+            hizmeti sunmak.<br />Müşterilerimizin geri dönüşleri muazzam derecede olduğu sürece hizmetlerimizin kalitesinden
+            emin olmaya devam edeceğiz.
+        </p>
+        <p class="uyari">İstediğiniz oyunun ilanlarını görüntülemek için aşağıdaki linklerden ulaşabilirsiniz!</p>
+    </div>
+    <div class="hizmetleralan">
+        <div class="alanlol">
+            <div class="lolfoto">
+                <a href="@Url.Action("Lol_ilan","lol_ilan")"> <img src="~/Content/img/lolfoto.jpg" /></a>
+            </div>
+            <div class="link">
+                <a href="@Url.Action("Lol_ilan","lol_ilan")" class="button">
+                    <span> LOL İLAN</span>
+                </a>
+            </div>
+        </div>
+        <div class="alanvalo">
+            <div class="valofoto">
+                <a href="@Url.Action("Valo_ilan","Valorant_ilan")"><img src="~/Content/img/valofoto.png" /></a>
+            </div>
+            <div class="link">
+                <a href="@Url.Action("Valo_ilan","Valorant_ilan")" class="button">
+                    <span>VALO İLAN</span>
+                </a>
+            </div>
+        </div>
+        <div class="alantft">
+            <div class="tftfoto">
+                <a href="@Url.Action("Tft_ilan","Tft_ilan")"> <img src="~/Content/img/tftfoto.jpg" /></a>
+            </div>
+            <div class="link">
+                <a href="@Url.Action("Tft_ilan","Tft_ilan")" class="button">
+                    <span>TFT İLAN</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

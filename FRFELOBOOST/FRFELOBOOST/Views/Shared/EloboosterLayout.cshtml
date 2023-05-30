@@ -1,0 +1,72 @@
+﻿
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/Content/CSS/style.css">
+    <link rel="stylesheet" href="~/Content/CSS/util.css">
+
+    <link href="~/Content/layout-deneme.css" rel="stylesheet" />
+    <link href="~/Content/util.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <header id="home" class="main-header">
+        <div class="navbar">
+            <h1 class="logo">
+                <img src="~/Content/img/logosari.png" />
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="@Url.Action("EloboosterIndex","Anasayfa")">Anasayfa</a></li>
+                    <li><a href="@Url.Action("EloboosterIndex","Adverts")">İlanlar</a></li>
+                    <li><a href="@Url.Action("EloboosterIndex","Page")">İletişim</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="sagmenu">
+                <div class="linkadmin">
+                    <br />
+                    
+                    <a style="color:white;">@User.Identity.Name</a>
+
+
+
+                </div>
+                <div class="linkmusteri">
+                    <a href="@Url.Action("Login","Kullanicilar")">
+                        <img src="~/Content/img/cikisyap1.png" />
+
+
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+
+        @RenderBody()
+    </div>
+
+
+
+
+
+    <footer class="footer bg-light">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy 2023 FRF ELOBOOST</p>
+    </footer>
+
+</body>
+</html>

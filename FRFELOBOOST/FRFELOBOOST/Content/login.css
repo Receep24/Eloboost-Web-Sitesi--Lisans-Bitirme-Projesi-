@@ -1,0 +1,293 @@
+﻿body {
+    
+}
+.genel_alan {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/hizmetlerarka.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.kaydirma{
+   
+    margin: auto;
+    width: 50vh;
+    height: 23vh;
+}
+.ortala {
+
+    width:100%;
+    height:100%;
+    background-color: white;
+    margin: auto;
+    background-image: url('img/5-flylogin-min.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.username_hizala {
+    padding-top:20%;
+    width:100%;
+    height:10%;
+    text-align:center;
+    
+}
+.password_hizala {
+    width: 100%;
+    height: 15%;
+    text-align: center;
+   
+}
+.hatirla {
+    width: 100%;
+    height: 5%;
+    text-align: center;
+   
+    
+}
+.buton_hizala {
+    margin-top:3%;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+   
+}
+.button {
+    margin-bottom:1.2%;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    width: 20%;
+    height:80%;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-weight: bold;
+  
+}
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .button span:after {
+            content: '\00ab';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .button:hover span {
+        padding-right: 2vh;
+    }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+.button1 {
+    color: rgb(45 172 25);
+    outline: 0;
+    border: 2px solid currentcolor;
+    transition: 0.5s ease all;
+    background-color: #fff;
+    font-size: 20px;
+    border-radius: 4px;
+    width: 20%;
+    height: 80%;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+
+    .button1:hover {
+        color: #fff;
+        border-color: transparent;
+        background-color: rgb(45 172 25);
+    }
+.txt_username {
+    width: 40%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.txt_password {
+    width: 40%;
+    margin-top:2%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.unuttum {
+    width:100%;
+    height:10%;
+    
+    text-align:center;
+}
+.unuttum a {
+    color: red;
+    font-size: 130%;
+    text-decoration: none;
+}
+.unuttum a:hover {
+    color:white;
+    text-decoration:underline;
+}
+.labelayar {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:bold;
+}
+.labelayar_password {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin-left: 1%;
+}
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 30%;
+    height: 50%;
+    color: #fff;
+    border-radius: 10px;
+    background: transparent;
+    overflow: hidden;
+    border-top: 3px solid rgba(255, 49, 49, 0.8);
+    border-right: 3px solid rgb(33, 213, 208, 0.8);
+    border-bottom: 3px solid rgb(45, 172, 25,0.8);
+    border-left: 3px solid rgba(255, 255, 113, 0.8);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+span {
+    position: absolute;
+    border-radius: 100vmax;
+}
+
+.top {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 10px;
+    background: linear-gradient( 90deg, transparent 50%, rgba(255, 49, 49, 0.5), rgb(255, 49, 49) );
+}
+
+.bottom {
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    background: linear-gradient( 90deg, rgb(57, 255, 20), rgba(57, 255, 20, 0.5), transparent 50% );
+}
+
+.right {
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 0;
+    background: linear-gradient( 180deg, transparent 30%, rgba(0, 255, 255, 0.5), rgb(0, 255, 255) );
+}
+
+.left {
+    left: 0;
+    bottom: 0;
+    width: 10px;
+    height: 0;
+    background: linear-gradient( 180deg, rgb(255, 255, 113), rgba(255, 255, 113, 0.5), transparent 70% );
+}
+
+.top {
+    animation: animateTop 4s ease-in-out infinite;
+}
+
+.bottom {
+    animation: animateBottom 4s ease-in-out infinite;
+}
+
+.right {
+    animation: animateRight 4s ease-in-out infinite;
+}
+
+.left {
+    animation: animateLeft 4s ease-in-out infinite;
+}
+
+@keyframes animateTop {
+    25% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    30%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animateBottom {
+    0%, 50% {
+        opacity: 0;
+        width: 0;
+    }
+
+    75% {
+        opacity: 1;
+        width: 100%;
+    }
+
+    76%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animateRight {
+    0%, 25% {
+        opacity: 0;
+        height: 0;
+    }
+
+    50% {
+        opacity: 1;
+        height: 100%;
+    }
+
+    55%, 100% {
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes animateLeft {
+    0%, 75% {
+        opacity: 0;
+        bottom: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6cbba5eb581a44319a88627444e8b5d0" Name="Diagram1">
+        <EntityTypeShape EntityType="FRF_ELOBOOSTModel.Admins" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="FRF_ELOBOOSTModel.Adverts" Width="1.5" PointX="5.25" PointY="5.125" />
+        <EntityTypeShape EntityType="FRF_ELOBOOSTModel.Comments" Width="1.5" PointX="5.25" PointY="9.25" />
+        <EntityTypeShape EntityType="FRF_ELOBOOSTModel.Customers" Width="1.5" PointX="3" PointY="8.75" />
+        <EntityTypeShape EntityType="FRF_ELOBOOSTModel.Elooboster" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="FRF_ELOBOOSTModel.Games" Width="1.5" PointX="3" PointY="13.375" />
+        <EntityTypeShape EntityType="FRF_ELOBOOSTModel.Genders" Width="1.5" PointX="0.75" PointY="5.625" />
+        <EntityTypeShape EntityType="FRF_ELOBOOSTModel.Ranks" Width="1.5" PointX="0.75" PointY="13.5" />
+        <EntityTypeShape EntityType="FRF_ELOBOOSTModel.Users" Width="1.5" PointX="5.75" PointY="0.75" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Admins_GenderID" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Adverts_EloobosterID" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Adverts_GamesID" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Adverts_RankID" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Comments_CustomerID" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Comments_GamesID" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Customers_GenderID" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Elooboster_GenderID" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Games_RankID" />
+        <EntityTypeShape EntityType="FRF_ELOBOOSTModel.Meetings" Width="1.5" PointX="7.5" PointY="8.75" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Meetings_AdvertsID" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Meetings_CustomerID" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Meetings_EloobosterID" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Meetings_GamesID" />
+        <AssociationConnector Association="FRF_ELOBOOSTModel.FK_Meetings_RankID" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FRF_ELOBOOSTModelStoreContainer" CdmEntityContainer="FRF_ELOBOOSTEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="FRF_ELOBOOSTModel.Admins">
+        <MappingFragment StoreEntitySet="Admins">
+          <ScalarProperty Name="TelefonNo" ColumnName="TelefonNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="usertype" ColumnName="usertype" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="AdminsID" ColumnName="AdminsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Adverts">
+      <EntityTypeMapping TypeName="FRF_ELOBOOSTModel.Adverts">
+        <MappingFragment StoreEntitySet="Adverts">
+          <ScalarProperty Name="AdvertDate" ColumnName="AdvertDate" />
+          <ScalarProperty Name="AdvertTitle" ColumnName="AdvertTitle" />
+          <ScalarProperty Name="RankID" ColumnName="RankID" />
+          <ScalarProperty Name="GamesID" ColumnName="GamesID" />
+          <ScalarProperty Name="EloobosterID" ColumnName="EloobosterID" />
+          <ScalarProperty Name="AdvertsID" ColumnName="AdvertsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="FRF_ELOBOOSTModel.Comments">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="CommentsName" ColumnName="CommentsName" />
+          <ScalarProperty Name="GamesID" ColumnName="GamesID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CommentsID" ColumnName="CommentsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="FRF_ELOBOOSTModel.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="usertype" ColumnName="usertype" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Elooboster">
+      <EntityTypeMapping TypeName="FRF_ELOBOOSTModel.Elooboster">
+        <MappingFragment StoreEntitySet="Elooboster">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="usertype" ColumnName="usertype" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="EloobosterID" ColumnName="EloobosterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Games">
+      <EntityTypeMapping TypeName="FRF_ELOBOOSTModel.Games">
+        <MappingFragment StoreEntitySet="Games">
+          <ScalarProperty Name="RankID" ColumnName="RankID" />
+          <ScalarProperty Name="GamesName" ColumnName="GamesName" />
+          <ScalarProperty Name="GamesID" ColumnName="GamesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="FRF_ELOBOOSTModel.Genders">
+        <MappingFragment StoreEntitySet="Genders">
+          <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ranks">
+      <EntityTypeMapping TypeName="FRF_ELOBOOSTModel.Ranks">
+        <MappingFragment StoreEntitySet="Ranks">
+          <ScalarProperty Name="RankPrice" ColumnName="RankPrice" />
+          <ScalarProperty Name="RankName" ColumnName="RankName" />
+          <ScalarProperty Name="RankID" ColumnName="RankID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="FRF_ELOBOOSTModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="usertype" ColumnName="usertype" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meetings">
+      <EntityTypeMapping TypeName="FRF_ELOBOOSTModel.Meetings">
+        <MappingFragment StoreEntitySet="Meetings">
+          <ScalarProperty Name="MeetingDate" ColumnName="MeetingDate" />
+          <ScalarProperty Name="RankID" ColumnName="RankID" />
+          <ScalarProperty Name="GamesID" ColumnName="GamesID" />
+          <ScalarProperty Name="AdvertsID" ColumnName="AdvertsID" />
+          <ScalarProperty Name="EloobosterID" ColumnName="EloobosterID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="MeetID" ColumnName="MeetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

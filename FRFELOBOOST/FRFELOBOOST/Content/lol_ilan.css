@@ -1,0 +1,225 @@
+﻿body {
+}
+.container {
+    background-image: url('img/ilan_lol_bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.aciklama_alan {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10vh;
+    background: rgb(179 228 237 /0.55);
+}
+    .aciklama_alan h1 {
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-weight: bold;
+        color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+.aciklama_alan2 h3 {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: bold;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.aciklama_alan2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20vh;
+    background: rgb(50 98 107 / 0.55);
+}
+.ilan_alan {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 180vh;
+    
+}
+.ust_alan {
+    margin-top:1%;
+    margin-left: 2%;
+    display: flex;
+    width: 96%;
+    height: 75vh;
+    
+}
+
+.ilan1 {
+    float: left;
+    width: 24%;
+    height: 70vh;
+    background: rgba(255,255,255, 0.75);
+    border-radius: 15px;
+}
+.ilan1 h2{margin-top:5%;
+          text-align:center;
+          font-weight:500;
+
+}
+.ilan1_foto {
+    width: 60%;
+   margin:auto;
+    height: 35vh;
+}
+.ilan1_aciklama {
+    width: 40%;
+    height: 20vh;
+    margin-left:5%;
+    float:left;
+}
+.ilan1_aciklama p{
+text-align:right;
+font-weight:bold;
+}
+.ilan1_db {
+    margin-left:2%;
+    font-weight:400;
+    width: 40%;
+    height: 20vh;
+    float: left;
+}
+.ilan1_buton {
+    display: flex;
+    width: 12vh;
+    margin-top: 18vh;
+    margin-left: auto;
+    margin-right: auto;
+    height: 6vh;
+}
+.ilan2 {
+    margin-left: 1%;
+    float: left;
+    width: 24%;
+    height: 70vh;
+    background: rgba(255,255,255, 0.75);
+    border-radius: 15px;
+}
+.ilan2_foto {
+    width: 90%;
+    height: 35vh;
+    margin: auto;
+    
+}
+.ilan2 h2 {
+    margin-top: 5%;
+    text-align: center;
+    font-weight: 500;
+}
+.ilan3 {
+    margin-left: 1%;
+    float: left;
+    width: 24%;
+    height: 70vh;
+    background: rgba(255,255,255, 0.75);
+    border-radius: 15px;
+}
+.ilan3_foto {
+    width: 55%;
+    height: 35vh;
+    margin: auto;
+}
+
+.ilan3 h2 {
+    margin-top: 5%;
+    text-align: center;
+    font-weight: 500;
+}
+.ilan4 {
+    margin-left: 1%;
+    float: left;
+    width: 24%;
+    height: 70vh;
+    background: rgba(255,255,255, 0.75);
+    border-radius: 15px;
+}
+.ilan4_foto {
+    width: 80%;
+    margin:auto;
+    height: 35vh;
+    
+}
+
+.ilan4 h2 {
+    margin-top: 5%;
+    text-align: center;
+    font-weight: 500;
+}
+.alt_alan {
+    margin-left: 2%;
+    display: flex;
+    width: 96%;
+    height: 75vh;
+    
+}
+
+
+
+.ilan5_foto {
+    width: 100%;
+    margin: auto;
+    height: 35vh;
+}
+.ilan6_foto {
+    width: 110%;
+    margin: auto;
+    height: 35vh;
+}
+.ilan7_foto {
+    width: 100%;
+    margin: auto;
+    height: 35vh;
+}
+.ilan8_foto {
+    width: 90%;
+    margin: auto;
+    height: 35vh;
+}
+/*buton*/
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+}
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .button:hover span {
+        padding-right:2vh;
+    }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }   

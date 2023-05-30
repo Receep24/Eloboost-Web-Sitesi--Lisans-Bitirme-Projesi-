@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+    <link href="~/Content/login.css" rel="stylesheet" />
+    <title>Giriş Yap</title>
+}
+<div class="genel_alan">
+    <div class="kaydirma">
+    </div>
+    <article class="card">
+        <div class="ortala">
+            <form method="post">
+
+
+                <div class="container">
+                    <div class="username_hizala">
+                        <label class="labelayar" for="uname">Username:</label>
+                        <input class="txt_username" type="text" placeholder="Kullanıcı adınızı giriniz." name="username" required>
+                    </div>
+                    <div class="password_hizala">
+                        <label class="labelayar_password" for="psw">Password:</label>
+                        <input class="txt_password" type="password" placeholder="Sifrenizi giriniz." name="password" required>
+                    </div>
+                    <div class="hatirla">
+                        <label>
+                           
+                        </label>
+                    </div>
+                    <div class="buton_hizala">
+                        <button class="button1" type="submit">Giriş</button>
+                        <button onclick="window.location.href='@Url.Action("Index","Anasayfa")'" class="button" style="vertical-align:middle">
+                            <span>Çıkış</span>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="unuttum">
+                    
+                </div>
+
+                <div class="container-login100-form-btn">
+                    @if (ViewBag.hata != null)
+                    {
+                        <p class="text-danger">@ViewBag.hata</p>
+                    }
+                </div>
+
+            </form>
+
+        </div>
+        <span class="top"></span>
+        <span class="right"></span>
+        <span class="bottom"></span>
+        <span class="left"></span>
+    </article>
+</div>

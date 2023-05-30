@@ -1,0 +1,330 @@
+﻿
+@model FRFELOBOOST.Models.ViewModel
+@{
+    ViewBag.Title = "Lol_ilan";
+    Layout = "~/Views/Shared/MusteriLayout.cshtml";
+    <title>LoL İlanları</title>
+    <link href="~/Content/lol_ilan.css" rel="stylesheet" />
+}
+<div class="container">
+    <div class="aciklama_alan"><h1>LEAGUE OF LEGENDS ELOBOOST İLANLARI</h1></div>
+    <div class="aciklama_alan2">
+        <h3>
+            Aşağıdaki League of Legends ilanlarından size
+            uygun olanı seçin ve satın alın.
+        </h3>
+    </div>
+
+    <div class="ilan_alan">
+        <div class="ust_alan">
+            <div class="ilan1">
+                @foreach (var ilan in Model.Adverts)
+                {
+                    if (ilan.AdvertsID == 1)
+                    {
+                        <h2>@ilan.AdvertTitle</h2>
+
+                    }
+                }
+                <div class="ilan1_foto">
+                    <img src="~/Content/img/riven.png" />
+                </div>
+                <div class="ilan1_aciklama">
+                    <p>Elobooster:</p>
+                    <p>Küme Aralığı:</p>
+                    <p>Fiyat:</p>
+                    <p>İlan Tarihi:</p>
+                </div>
+                <div class="ilan1_db">
+                    @foreach (var ilan in Model.Adverts)
+                    {
+                        if (ilan.AdvertsID == 1)
+                        {
+                            <p>@ilan.Elooboster.FirstName</p>
+                            <p>@ilan.Ranks.RankName</p>
+                            <p>@ilan.Ranks.RankPrice</p>
+                            <p>@Convert.ToString(string.Format("{0:dd-MMMM-yyyy}", ilan.AdvertDate))</p>
+                        }
+                    }
+                </div>
+                <div class="ilan1_buton">
+                    <button onclick="window.location.href='@Url.Action("MusteriCreate","Meetings")'" class="button" style="vertical-align:middle">
+                        <span>Randevu Al</span>
+                    </button>
+                </div>
+            </div>
+            <div class="ilan2">
+                @foreach (var ilan in Model.Adverts)
+                {
+                    if (ilan.AdvertsID == 2)
+                    {
+                        <h2>@ilan.AdvertTitle</h2>
+
+                    }
+                }
+                <div class="ilan2_foto">
+                    <img src="~/Content/img/zed3.png" />
+                </div>
+                <div class="ilan1_aciklama">
+                    <p>Elobooster:</p>
+                    <p>Küme Aralığı:</p>
+                    <p>Fiyat:</p>
+                    <p>İlan Tarihi:</p>
+                </div>
+                <div class="ilan1_db">
+                    @foreach (var ilan in Model.Adverts)
+                    {
+                        if (ilan.AdvertsID == 2)
+                        {
+                            <p>@ilan.Elooboster.FirstName</p>
+                            <p>@ilan.Ranks.RankName</p>
+                            <p>@ilan.Ranks.RankPrice</p>
+                            <p>@Convert.ToString(string.Format("{0:dd-MMMM-yyyy}", ilan.AdvertDate))</p>
+                        }
+                    }
+                </div>
+                <div class="ilan1_buton">
+                    <button onclick="window.location.href='@Url.Action("MusteriCreate","Meetings")'" class="button" style="vertical-align:middle">
+                        <span>Randevu Al</span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="ilan3">
+                @foreach (var ilan in Model.Adverts)
+                {
+                    if (ilan.AdvertsID == 5)
+                    {
+                        <h2>@ilan.AdvertTitle</h2>
+
+                    }
+                }
+                <div class="ilan3_foto">
+                    <img src="~/Content/img/garen.png" />
+                </div>
+                <div class="ilan1_aciklama">
+                    <p>Elobooster:</p>
+                    <p>Küme Aralığı:</p>
+                    <p>Fiyat:</p>
+                    <p>İlan Tarihi:</p>
+                </div>
+                <div class="ilan1_db">
+                    @foreach (var ilan in Model.Adverts)
+                    {
+                        if (ilan.AdvertsID == 5)
+                        {
+                            <p>@ilan.Elooboster.FirstName</p>
+                            <p>@ilan.Ranks.RankName</p>
+                            <p>@ilan.Ranks.RankPrice</p>
+                            <p>@Convert.ToString(string.Format("{0:dd-MMMM-yyyy}", ilan.AdvertDate))</p>
+                        }
+                    }
+                </div>
+                <div class="ilan1_buton">
+                    <button onclick="window.location.href='@Url.Action("MusteriCreate","Meetings")'" class="button" style="vertical-align:middle">
+                        <span>Randevu Al</span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="ilan4">
+                @foreach (var ilan in Model.Adverts)
+                {
+                    if (ilan.AdvertsID == 11)
+                    {
+                        <h2>@ilan.AdvertTitle</h2>
+
+                    }
+                }
+                <div class="ilan4_foto">
+                    <img src="~/Content/img/yasuo.png" />
+                </div>
+                <div class="ilan1_aciklama">
+                    <p>Elobooster:</p>
+                    <p>Küme Aralığı:</p>
+                    <p>Fiyat:</p>
+                    <p>İlan Tarihi:</p>
+                </div>
+                <div class="ilan1_db">
+                    @foreach (var ilan in Model.Adverts)
+                    {
+                        if (ilan.AdvertsID == 11)
+                        {
+                            <p>@ilan.Elooboster.FirstName</p>
+                            <p>@ilan.Ranks.RankName</p>
+                            <p>@ilan.Ranks.RankPrice</p>
+                            <p>@Convert.ToString(string.Format("{0:dd-MMMM-yyyy}", ilan.AdvertDate))</p>
+                        }
+                    }
+                </div>
+                <div class="ilan1_buton">
+                    <button onclick="window.location.href='@Url.Action("MusteriCreate","Meetings")'" class="button" style="vertical-align:middle">
+                        <span>Randevu Al</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="alt_alan">
+            <div class="ilan1">
+                @foreach (var ilan in Model.Adverts)
+                {
+                    if (ilan.AdvertsID == 11)
+                    {
+                        <h2>@ilan.AdvertTitle</h2>
+
+                    }
+                }
+                <div class="ilan5_foto">
+                    <img src="~/Content/img/popy.png" />
+                </div>
+                <div class="ilan1_aciklama">
+                    <p>Elobooster:</p>
+                    <p>Küme Aralığı:</p>
+                    <p>Fiyat:</p>
+                    <p>İlan Tarihi:</p>
+                </div>
+                <div class="ilan1_db">
+                    @foreach (var ilan in Model.Adverts)
+                    {
+                        if (ilan.AdvertsID == 11)
+                        {
+                            <p>@ilan.Elooboster.FirstName</p>
+                            <p>@ilan.Ranks.RankName</p>
+                            <p>@ilan.Ranks.RankPrice</p>
+                            <p>@Convert.ToString(string.Format("{0:dd-MMMM-yyyy}", ilan.AdvertDate))</p>
+                        }
+                    }
+                </div>
+                <div class="ilan1_buton">
+                    <button onclick="window.location.href='@Url.Action("MusteriCreate","Meetings")'" class="button" style="vertical-align:middle">
+                        <span>Randevu Al</span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="ilan2">
+                @foreach (var ilan in Model.Adverts)
+                {
+                    if (ilan.AdvertsID == 5)
+                    {
+                        <h2>@ilan.AdvertTitle</h2>
+
+                    }
+                }
+                <div class="ilan6_foto">
+                    <img src="~/Content/img/lee2.png" />
+                </div>
+                <div class="ilan1_aciklama">
+                    <p>Elobooster:</p>
+                    <p>Küme Aralığı:</p>
+                    <p>Fiyat:</p>
+                    <p>İlan Tarihi:</p>
+                </div>
+                <div class="ilan1_db">
+                    @foreach (var ilan in Model.Adverts)
+                    {
+                        if (ilan.AdvertsID == 5)
+                        {
+                            <p>@ilan.Elooboster.FirstName</p>
+                            <p>@ilan.Ranks.RankName</p>
+                            <p>@ilan.Ranks.RankPrice</p>
+                            <p>@Convert.ToString(string.Format("{0:dd-MMMM-yyyy}", ilan.AdvertDate))</p>
+                        }
+                    }
+                </div>
+                <div class="ilan1_buton">
+                    <button onclick="window.location.href='@Url.Action("MusteriCreate","Meetings")'" class="button" style="vertical-align:middle">
+                        <span>Randevu Al</span>
+                    </button>
+                </div>
+
+            </div>
+            <div class="ilan3">
+                @foreach (var ilan in Model.Adverts)
+                {
+                    if (ilan.AdvertsID == 2)
+                    {
+                        <h2>@ilan.AdvertTitle</h2>
+
+                    }
+                }
+                <div class="ilan7_foto">
+                    <img src="~/Content/img/diana2.png" />
+                </div>
+                <div class="ilan1_aciklama">
+                    <p>Elobooster:</p>
+                    <p>Küme Aralığı:</p>
+                    <p>Fiyat:</p>
+                    <p>İlan Tarihi:</p>
+                </div>
+                <div class="ilan1_db">
+                    @foreach (var ilan in Model.Adverts)
+                    {
+                        if (ilan.AdvertsID == 2)
+                        {
+                            <p>@ilan.Elooboster.FirstName</p>
+                            <p>@ilan.Ranks.RankName</p>
+                            <p>@ilan.Ranks.RankPrice</p>
+                            <p>@Convert.ToString(string.Format("{0:dd-MMMM-yyyy}", ilan.AdvertDate))</p>
+                        }
+                    }
+                </div>
+                <div class="ilan1_buton">
+                    <button onclick="window.location.href='@Url.Action("MusteriCreate","Meetings")'" class="button" style="vertical-align:middle">
+                        <span>Randevu Al</span>
+                    </button>
+                </div>
+
+
+            </div>
+            <div class="ilan4">
+                @foreach (var ilan in Model.Adverts)
+                {
+                    if (ilan.AdvertsID == 1)
+                    {
+                        <h2>@ilan.AdvertTitle</h2>
+
+                    }
+                }
+                <div class="ilan8_foto">
+                    <img src="~/Content/img/zed3.png" />
+                </div>
+                <div class="ilan1_aciklama">
+                    <p>Elobooster:</p>
+                    <p>Küme Aralığı:</p>
+                    <p>Fiyat:</p>
+                    <p>İlan Tarihi:</p>
+                </div>
+                <div class="ilan1_db">
+                    @foreach (var ilan in Model.Adverts)
+                    {
+                        if (ilan.AdvertsID == 1)
+                        {
+                            <p>@ilan.Elooboster.FirstName</p>
+                            <p>@ilan.Ranks.RankName</p>
+                            <p>@ilan.Ranks.RankPrice</p>
+                            <p>@Convert.ToString(string.Format("{0:dd-MMMM-yyyy}", ilan.AdvertDate))</p>
+                        }
+                    }
+                </div>
+                <div class="ilan1_buton">
+
+                    <button onclick="window.location.href='@Url.Action("MusteriCreate","Meetings")'" class="button" style="vertical-align:middle">
+                        <span>Randevu Al</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

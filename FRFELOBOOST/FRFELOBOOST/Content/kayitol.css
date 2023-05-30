@@ -1,0 +1,116 @@
+﻿body {
+}
+/*  * b      */
+.genel_alan {
+    width: 100%;
+    height: 100vh;
+    background-image: url('img/hizmetlerarka.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.alan1 {
+    border-radius: 10%;
+    margin-left: 20%;
+    margin-top: 3%;
+    width: 57vh;
+    height: 60vh;
+    background-color: white;
+    float: left;
+}
+
+
+.form-alan {
+    margin-left: 2%;
+    padding-top: 6vh;
+    width: 45vh;
+    height: 60vh;
+   
+}
+.formkaydir {
+  background-color:rgb(255, 255, 255,0.7);
+    width: 100%;
+    height: 15vh;
+    
+}
+    .formkaydir h1 {
+        color:black;
+        text-align:center;
+        
+        font-weight:bold;
+        font-size:350%;
+    }
+.kullanici-adi {
+
+    text-align: right;
+    height: 5vh;
+}
+.kullanici-adi1 {
+    text-align: right;
+    height: 5vh;
+    display:none;
+}
+.txt {
+   
+    width: 25vh;
+    height: 80%;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.button1 {
+    background-color: rgb(45 172 25);
+    outline: 0;
+    border: 2px solid  green;
+    transition: 0.5s ease all;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 4px;
+    width: 12vh;
+    height: 5vh;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+
+    .button1:hover {
+        
+        background-color: #fff;
+        
+        color: rgb(45 172 25);
+    }
+
+.buton-yonet {
+    margin-left:20vh;
+}
+.label-renk {
+    font-weight:600;
+    color: rgb(41 59 165);
+}
+.alan2 {
+    border-radius: 10%;
+    margin-left: 10%;
+    margin-top: 3%;
+    width: 57vh;
+    height: 60vh;
+    background-color:rgb(255, 255, 255,0.75);
+    float: left;
+}
+.alan2_yazi {
+    float: left;
+    width: 60%;
+    margin-left: 20vh;
+    text-align: center;
+}
+    .alan2_yazi p {
+        font-size:150%;
+        font-weight:bold;
+    }
+    .alan2_foto {
+        float: left;
+    }
+.alan2_foto img {
+    
+    width: 60%;
+}

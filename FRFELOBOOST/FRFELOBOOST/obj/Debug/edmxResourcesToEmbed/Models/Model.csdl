@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FRF_ELOBOOSTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="FRF_ELOBOOSTEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="FRF_ELOBOOSTModel.Admins" />
+    <EntitySet Name="Adverts" EntityType="FRF_ELOBOOSTModel.Adverts" />
+    <EntitySet Name="Comments" EntityType="FRF_ELOBOOSTModel.Comments" />
+    <EntitySet Name="Customers" EntityType="FRF_ELOBOOSTModel.Customers" />
+    <EntitySet Name="Elooboster" EntityType="FRF_ELOBOOSTModel.Elooboster" />
+    <EntitySet Name="Games" EntityType="FRF_ELOBOOSTModel.Games" />
+    <EntitySet Name="Genders" EntityType="FRF_ELOBOOSTModel.Genders" />
+    <EntitySet Name="Ranks" EntityType="FRF_ELOBOOSTModel.Ranks" />
+    <EntitySet Name="Users" EntityType="FRF_ELOBOOSTModel.Users" />
+    <AssociationSet Name="FK_Admins_GenderID" Association="FRF_ELOBOOSTModel.FK_Admins_GenderID">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Admins" EntitySet="Admins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Adverts_EloobosterID" Association="FRF_ELOBOOSTModel.FK_Adverts_EloobosterID">
+      <End Role="Elooboster" EntitySet="Elooboster" />
+      <End Role="Adverts" EntitySet="Adverts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Adverts_GamesID" Association="FRF_ELOBOOSTModel.FK_Adverts_GamesID">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Adverts" EntitySet="Adverts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Adverts_RankID" Association="FRF_ELOBOOSTModel.FK_Adverts_RankID">
+      <End Role="Ranks" EntitySet="Ranks" />
+      <End Role="Adverts" EntitySet="Adverts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_CustomerID" Association="FRF_ELOBOOSTModel.FK_Comments_CustomerID">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_GamesID" Association="FRF_ELOBOOSTModel.FK_Comments_GamesID">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customers_GenderID" Association="FRF_ELOBOOSTModel.FK_Customers_GenderID">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Elooboster_GenderID" Association="FRF_ELOBOOSTModel.FK_Elooboster_GenderID">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Elooboster" EntitySet="Elooboster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Games_RankID" Association="FRF_ELOBOOSTModel.FK_Games_RankID">
+      <End Role="Ranks" EntitySet="Ranks" />
+      <End Role="Games" EntitySet="Games" />
+    </AssociationSet>
+    <EntitySet Name="Meetings" EntityType="FRF_ELOBOOSTModel.Meetings" />
+    <AssociationSet Name="FK_Meetings_AdvertsID" Association="FRF_ELOBOOSTModel.FK_Meetings_AdvertsID">
+      <End Role="Adverts" EntitySet="Adverts" />
+      <End Role="Meetings" EntitySet="Meetings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Meetings_CustomerID" Association="FRF_ELOBOOSTModel.FK_Meetings_CustomerID">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Meetings" EntitySet="Meetings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Meetings_EloobosterID" Association="FRF_ELOBOOSTModel.FK_Meetings_EloobosterID">
+      <End Role="Elooboster" EntitySet="Elooboster" />
+      <End Role="Meetings" EntitySet="Meetings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Meetings_GamesID" Association="FRF_ELOBOOSTModel.FK_Meetings_GamesID">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Meetings" EntitySet="Meetings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Meetings_RankID" Association="FRF_ELOBOOSTModel.FK_Meetings_RankID">
+      <End Role="Ranks" EntitySet="Ranks" />
+      <End Role="Meetings" EntitySet="Meetings" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Admins">
+    <Key>
+      <PropertyRef Name="AdminsID" />
+    </Key>
+    <Property Name="AdminsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usertype" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GenderID" Type="Int32" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TelefonNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Genders" Relationship="FRF_ELOBOOSTModel.FK_Admins_GenderID" FromRole="Admins" ToRole="Genders" />
+  </EntityType>
+  <EntityType Name="Adverts">
+    <Key>
+      <PropertyRef Name="AdvertsID" />
+    </Key>
+    <Property Name="AdvertsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EloobosterID" Type="Int32" />
+    <Property Name="GamesID" Type="Int32" />
+    <Property Name="RankID" Type="Int32" />
+    <Property Name="AdvertTitle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AdvertDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Elooboster" Relationship="FRF_ELOBOOSTModel.FK_Adverts_EloobosterID" FromRole="Adverts" ToRole="Elooboster" />
+    <NavigationProperty Name="Games" Relationship="FRF_ELOBOOSTModel.FK_Adverts_GamesID" FromRole="Adverts" ToRole="Games" />
+    <NavigationProperty Name="Ranks" Relationship="FRF_ELOBOOSTModel.FK_Adverts_RankID" FromRole="Adverts" ToRole="Ranks" />
+    <NavigationProperty Name="Meetings" Relationship="FRF_ELOBOOSTModel.FK_Meetings_AdvertsID" FromRole="Adverts" ToRole="Meetings" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="CommentsID" />
+    </Key>
+    <Property Name="CommentsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="GamesID" Type="Int32" />
+    <Property Name="CommentsName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Customers" Relationship="FRF_ELOBOOSTModel.FK_Comments_CustomerID" FromRole="Comments" ToRole="Customers" />
+    <NavigationProperty Name="Games" Relationship="FRF_ELOBOOSTModel.FK_Comments_GamesID" FromRole="Comments" ToRole="Games" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usertype" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GenderID" Type="Int32" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Comments" Relationship="FRF_ELOBOOSTModel.FK_Comments_CustomerID" FromRole="Customers" ToRole="Comments" />
+    <NavigationProperty Name="Genders" Relationship="FRF_ELOBOOSTModel.FK_Customers_GenderID" FromRole="Customers" ToRole="Genders" />
+    <NavigationProperty Name="Meetings" Relationship="FRF_ELOBOOSTModel.FK_Meetings_CustomerID" FromRole="Customers" ToRole="Meetings" />
+  </EntityType>
+  <EntityType Name="Elooboster">
+    <Key>
+      <PropertyRef Name="EloobosterID" />
+    </Key>
+    <Property Name="EloobosterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usertype" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GenderID" Type="Int32" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Adverts" Relationship="FRF_ELOBOOSTModel.FK_Adverts_EloobosterID" FromRole="Elooboster" ToRole="Adverts" />
+    <NavigationProperty Name="Genders" Relationship="FRF_ELOBOOSTModel.FK_Elooboster_GenderID" FromRole="Elooboster" ToRole="Genders" />
+    <NavigationProperty Name="Meetings" Relationship="FRF_ELOBOOSTModel.FK_Meetings_EloobosterID" FromRole="Elooboster" ToRole="Meetings" />
+  </EntityType>
+  <EntityType Name="Games">
+    <Key>
+      <PropertyRef Name="GamesID" />
+    </Key>
+    <Property Name="GamesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GamesName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RankID" Type="Int32" />
+    <NavigationProperty Name="Adverts" Relationship="FRF_ELOBOOSTModel.FK_Adverts_GamesID" FromRole="Games" ToRole="Adverts" />
+    <NavigationProperty Name="Comments" Relationship="FRF_ELOBOOSTModel.FK_Comments_GamesID" FromRole="Games" ToRole="Comments" />
+    <NavigationProperty Name="Ranks" Relationship="FRF_ELOBOOSTModel.FK_Games_RankID" FromRole="Games" ToRole="Ranks" />
+    <NavigationProperty Name="Meetings" Relationship="FRF_ELOBOOSTModel.FK_Meetings_GamesID" FromRole="Games" ToRole="Meetings" />
+  </EntityType>
+  <EntityType Name="Genders">
+    <Key>
+      <PropertyRef Name="GenderID" />
+    </Key>
+    <Property Name="GenderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GenderName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Admins" Relationship="FRF_ELOBOOSTModel.FK_Admins_GenderID" FromRole="Genders" ToRole="Admins" />
+    <NavigationProperty Name="Customers" Relationship="FRF_ELOBOOSTModel.FK_Customers_GenderID" FromRole="Genders" ToRole="Customers" />
+    <NavigationProperty Name="Elooboster" Relationship="FRF_ELOBOOSTModel.FK_Elooboster_GenderID" FromRole="Genders" ToRole="Elooboster" />
+  </EntityType>
+  <EntityType Name="Ranks">
+    <Key>
+      <PropertyRef Name="RankID" />
+    </Key>
+    <Property Name="RankID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RankName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RankPrice" Type="Int32" />
+    <NavigationProperty Name="Adverts" Relationship="FRF_ELOBOOSTModel.FK_Adverts_RankID" FromRole="Ranks" ToRole="Adverts" />
+    <NavigationProperty Name="Games" Relationship="FRF_ELOBOOSTModel.FK_Games_RankID" FromRole="Ranks" ToRole="Games" />
+    <NavigationProperty Name="Meetings" Relationship="FRF_ELOBOOSTModel.FK_Meetings_RankID" FromRole="Ranks" ToRole="Meetings" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="usertype" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_Admins_GenderID">
+    <End Type="FRF_ELOBOOSTModel.Genders" Role="Genders" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Admins" Role="Admins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="GenderID" />
+      </Principal>
+      <Dependent Role="Admins">
+        <PropertyRef Name="GenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Adverts_EloobosterID">
+    <End Type="FRF_ELOBOOSTModel.Elooboster" Role="Elooboster" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Adverts" Role="Adverts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Elooboster">
+        <PropertyRef Name="EloobosterID" />
+      </Principal>
+      <Dependent Role="Adverts">
+        <PropertyRef Name="EloobosterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Adverts_GamesID">
+    <End Type="FRF_ELOBOOSTModel.Games" Role="Games" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Adverts" Role="Adverts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="GamesID" />
+      </Principal>
+      <Dependent Role="Adverts">
+        <PropertyRef Name="GamesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Adverts_RankID">
+    <End Type="FRF_ELOBOOSTModel.Ranks" Role="Ranks" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Adverts" Role="Adverts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ranks">
+        <PropertyRef Name="RankID" />
+      </Principal>
+      <Dependent Role="Adverts">
+        <PropertyRef Name="RankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_CustomerID">
+    <End Type="FRF_ELOBOOSTModel.Customers" Role="Customers" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Comments" Role="Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_GamesID">
+    <End Type="FRF_ELOBOOSTModel.Games" Role="Games" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Comments" Role="Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="GamesID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="GamesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customers_GenderID">
+    <End Type="FRF_ELOBOOSTModel.Genders" Role="Genders" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Customers" Role="Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="GenderID" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="GenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Elooboster_GenderID">
+    <End Type="FRF_ELOBOOSTModel.Genders" Role="Genders" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Elooboster" Role="Elooboster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="GenderID" />
+      </Principal>
+      <Dependent Role="Elooboster">
+        <PropertyRef Name="GenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Games_RankID">
+    <End Type="FRF_ELOBOOSTModel.Ranks" Role="Ranks" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Games" Role="Games" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ranks">
+        <PropertyRef Name="RankID" />
+      </Principal>
+      <Dependent Role="Games">
+        <PropertyRef Name="RankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Meetings">
+    <Key>
+      <PropertyRef Name="MeetID" />
+    </Key>
+    <Property Name="MeetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="EloobosterID" Type="Int32" />
+    <Property Name="AdvertsID" Type="Int32" />
+    <Property Name="GamesID" Type="Int32" />
+    <Property Name="RankID" Type="Int32" />
+    <Property Name="MeetingDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Adverts" Relationship="FRF_ELOBOOSTModel.FK_Meetings_AdvertsID" FromRole="Meetings" ToRole="Adverts" />
+    <NavigationProperty Name="Customers" Relationship="FRF_ELOBOOSTModel.FK_Meetings_CustomerID" FromRole="Meetings" ToRole="Customers" />
+    <NavigationProperty Name="Elooboster" Relationship="FRF_ELOBOOSTModel.FK_Meetings_EloobosterID" FromRole="Meetings" ToRole="Elooboster" />
+    <NavigationProperty Name="Games" Relationship="FRF_ELOBOOSTModel.FK_Meetings_GamesID" FromRole="Meetings" ToRole="Games" />
+    <NavigationProperty Name="Ranks" Relationship="FRF_ELOBOOSTModel.FK_Meetings_RankID" FromRole="Meetings" ToRole="Ranks" />
+  </EntityType>
+  <Association Name="FK_Meetings_AdvertsID">
+    <End Type="FRF_ELOBOOSTModel.Adverts" Role="Adverts" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Meetings" Role="Meetings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adverts">
+        <PropertyRef Name="AdvertsID" />
+      </Principal>
+      <Dependent Role="Meetings">
+        <PropertyRef Name="AdvertsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Meetings_CustomerID">
+    <End Type="FRF_ELOBOOSTModel.Customers" Role="Customers" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Meetings" Role="Meetings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Meetings">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Meetings_EloobosterID">
+    <End Type="FRF_ELOBOOSTModel.Elooboster" Role="Elooboster" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Meetings" Role="Meetings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Elooboster">
+        <PropertyRef Name="EloobosterID" />
+      </Principal>
+      <Dependent Role="Meetings">
+        <PropertyRef Name="EloobosterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Meetings_GamesID">
+    <End Type="FRF_ELOBOOSTModel.Games" Role="Games" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Meetings" Role="Meetings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="GamesID" />
+      </Principal>
+      <Dependent Role="Meetings">
+        <PropertyRef Name="GamesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Meetings_RankID">
+    <End Type="FRF_ELOBOOSTModel.Ranks" Role="Ranks" Multiplicity="0..1" />
+    <End Type="FRF_ELOBOOSTModel.Meetings" Role="Meetings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ranks">
+        <PropertyRef Name="RankID" />
+      </Principal>
+      <Dependent Role="Meetings">
+        <PropertyRef Name="RankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

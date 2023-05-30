@@ -1,0 +1,44 @@
+﻿@model IEnumerable<FRFELOBOOST.Models.Comments>
+
+@{
+    ViewBag.Title = "Yorumlar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Yorum Listesi</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            <p>Yorum İçeriği</p>
+        </th>
+        <th>
+            <p>Musteri Adı</p>
+        </th>
+        <th>
+            <p>Oyun Adı</p>
+        </th>
+        <th> Detaylar</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CommentsName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customers.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Games.GamesName)
+        </td>
+        <td>
+            
+            <a class="btn btn-primary" href="@Url.Action("Details", "Comments", new { id= item.CommentsID})">Detayı Gör</a>
+            <a class="btn btn-danger" href="@Url.Action("Delete", "Comments", new { id= item.CommentsID})">Sil</a>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,106 @@
+﻿body {
+   
+}
+.container {
+    background-image: url('img/elobooster_arka.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.alan_baslik {  
+    width: 100%;
+    height: 25vh;
+    background-color:rgb(255 ,255 ,255,0.45)
+}
+.alan_baslik h1 {
+   margin-left:23vh;
+    
+    font-weight:600;
+}
+    .alan_baslik p {
+        margin-left: 23vh;
+       
+        font-weight: 600;
+    }
+.ilan-link {
+    width:8%;
+   
+    height:18%;
+}
+.ilan-link img {
+    opacity:0.8
+}
+    .ilan-link img:hover {
+       opacity:1
+    }
+    
+   
+    .ilanlar_alan {
+        width: 100%;
+        height: 200%;
+    }
+.footer-ust {
+    width: 100%;
+    height: 20vh;
+   
+}
+.alan_ortala {
+    width: 80%;
+    margin:auto;
+    height: 100%;
+    
+}
+table th {
+   
+    background-color: white;
+}
+table td {
+  padding-top:5px;
+   background-color:white;
+}
+.baslik-boyut {
+    text-align:center;
+    width: 38vh;
+    height:15vh;
+}
+.oyun-boyut {
+    text-align: center;
+    width: 22vh;
+    height: 15vh;
+    color: purple;
+    font-weight:600;
+}
+.elobooster-boyut {
+    text-align: center;
+    width: 20vh;
+    height: 15vh;
+   
+}
+.kume-boyut {
+    text-align: center;
+    width: 22vh;
+    height: 15vh;
+}
+.fiyat-boyut {
+    text-align: center;
+    width: 14vh;
+    height: 15vh;
+}
+.tarih-boyut {
+    text-align: center;
+    width: 18vh;
+    height: 15vh;
+}
+.ayrıntılar-boyut {
+    text-align: center;
+    width: 18vh;
+    height: 15vh;
+   
+}
+.renk a{
+    color:green;
+}
+.renk a:hover{
+   text-decoration:underline 2px;
+}
+

@@ -1,0 +1,176 @@
+﻿body {
+}
+
+.kayit-alan1 {
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+}
+
+.booster_basvuru {
+    width: 70%;
+    margin: auto;
+    height: 13vh;
+    background-color: white;
+}
+
+    .booster_basvuru p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .booster_basvuru h1 {
+        font-weight: bold;
+        text-align: center;
+    }
+
+.kayit-alan2 {
+    width: 100%;
+    height: 80vh;
+}
+
+.alan2sol {
+    width: 49%;
+    height: 80vh;
+    background-image: url('img/ilan_valoarka.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.form_baslik {
+    text-align: center;
+}
+
+    .form_baslik h1 {
+        font-weight: bold;
+        color: white;
+    }
+
+.elo_kayit {
+    width: 55%;
+    height: 60vh;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: auto;
+}
+
+.alan2sol .elo_form {
+    width: 50%;
+    height: 50vh;
+    margin: auto;
+    padding-top: 5vh;
+    margin-bottom: auto;
+}
+
+.elo_kayit h2 {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.kullanici-adi {
+    height: 5vh;
+    width: 100%;
+}
+
+.kullanici-adi2 {
+    height: 15vh;
+    width: 100%;
+}
+
+.txt {
+    width: 25vh;
+    height: 80%;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.txt2 {
+    width: 25vh;
+    height: 80%;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button1 {
+    background-color: rgb(45 172 25);
+    outline: 0;
+    border: 2px solid green;
+    transition: 0.5s ease all;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 4px;
+    width: 12vh;
+    height: 5vh;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+
+    .button1:hover {
+        background-color: #fff;
+        color: rgb(45 172 25);
+    }
+
+.buton-yonet {
+    margin-top: 2vh;
+    width: 14vh;
+    height: 7vh;
+}
+
+
+.alan2sag {
+    width: 49%;
+    height: 80vh;
+    background-image: url('img/alan4arkaplan.jpg');
+    float: left;
+    margin-left: 2%;
+}
+
+    .alan2sag img {
+        width: 100%;
+        height: 100%;
+    }
+
+.kayit-alan3 {
+    width: 100%;
+    height: 40vh;
+    background-color: white;
+}
+
+.kayit-alan3foto1 {
+    width: 30%;
+    margin-right: 1%;
+    height: 40vh;
+    background-color: white;
+    float: left;
+}
+
+.kayit-alan3yazi {
+    width: 38%;
+    height: 40vh;
+    background-color: white;
+    float: left;
+}
+
+.kayit-alan3foto2 {
+    width: 30%;
+    height: 40vh;
+    margin-left: 1%;
+    background-color: white;
+    float: left;
+}
+
+.kayit-alan3yazi h3 {
+    text-align: center;
+}
+
+.kayit-alan3yazi p {
+    text-align: center;
+}

@@ -1,0 +1,44 @@
+﻿@model FRFELOBOOST.Models.Comments
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+}
+
+<h1 style="color:white;">Yorum Detay Sayfası</h1>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentsName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommentsName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customers.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customers.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Games.GamesName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Games.GamesName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CommentsID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

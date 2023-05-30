@@ -1,0 +1,110 @@
+﻿@model FRFELOBOOST.Models.Customers
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/layout_deneme.cshtml";
+    <title>Kayıt Ol</title>
+    <link href="~/Content/kayitol.css" rel="stylesheet" />
+
+}
+
+
+<div class="genel_alan">
+    <div class="formkaydir"><h1>MUSTERİ KAYIT FORMU</h1> </div>
+    <div class="alan1">
+        <div class="form-alan">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div>
+
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="kullanici-adi">
+                        @Html.LabelFor(model => model.username, "Kullanıcı Adı:", htmlAttributes: new { @class = "label-renk" })
+
+                        @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "txt", placeholder = "Kullanıcı adınızı giriniz.", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="kullanici-adi">
+                        @Html.LabelFor(model => model.password, "Şifre:", htmlAttributes: new { @class = "label-renk" })
+
+                        @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "txt", placeholder = "Şifrenizi giriniz.", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="kullanici-adi1">
+                        @Html.LabelFor(model => model.usertype, "Kullanıcı Tipi:", htmlAttributes: new { @class = "label-renk" })
+
+                        @Html.EditorFor(model => model.usertype, new { htmlAttributes = new { @class = "txt", @Value = "musteri" } })
+                        @Html.ValidationMessageFor(model => model.usertype, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="kullanici-adi">
+                        @Html.LabelFor(model => model.FirstName, "Ad:", htmlAttributes: new { @class = "label-renk" })
+
+                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "txt", placeholder = "Adınızı giriniz.", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="kullanici-adi">
+                        @Html.LabelFor(model => model.LastName, "Soyad:", htmlAttributes: new { @class = "label-renk" })
+
+                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "txt", placeholder = "Soyadınızı giriniz.", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="kullanici-adi">
+                        @Html.LabelFor(model => model.GenderID, "Cinsiyet:", htmlAttributes: new { @class = "label-renk" })
+
+                        @Html.DropDownList("GenderID", null, htmlAttributes: new { @class = "txt" })
+                        @Html.ValidationMessageFor(model => model.GenderID, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="kullanici-adi">
+                        @Html.LabelFor(model => model.Email, "e-Mail:", htmlAttributes: new { @class = "label-renk" })
+
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "txt", placeholder = "Mail adresinizi giriniz.", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="kullanici-adi">
+                        @Html.LabelFor(model => model.PhoneNumber, "Telefon:", htmlAttributes: new { @class = "label-renk" })
+
+                        @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "txt", placeholder = "Telefon numarası giriniz.", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div>
+                    <div class="buton-yonet">
+                        <input type="submit" value="Kayıt Ol" class="button1" />
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+    <div class="alan2">
+        <div class="alan2_yazi">
+            <br />
+            <p>Yan taraftan kayıt ol ve aramiza katıl.</p>
+        </div>
+        <div class="alan2_foto">
+            <img src="~/Content/img/garen.png" />
+        </div>
+    </div>
+</div>
+
+
+
+
